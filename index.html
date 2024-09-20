@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Registro de Productos</h1>
+    <form id="registro-producto" action="/api/productos" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required><br><br>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea name="descripcion" id="descripcion" rows="5" required></textarea><br><br>
+
+        <label for="precio">Precio:</label>
+        <input type="number" name="precio" id="precio" min="0" required><br><br>
+
+        <label for="categoria">Categoría:</label>
+        <select name="categoria" id="categoria" required>
+            <option value="Electrónica">Electrónica</option>
+            <option value="Ropa">Ropa</option>
+            <option value="Alimentos">Alimentos</option>
+        </select><br><br>
+
+        <label for="stock">Stock:</label>
+        <input type="number" name="stock" id="stock" min="0" required><br><br>
+
+        <button type="submit">Registrar Producto</button>
+    </form>
+
+    <hr>
+
+    <h1>Registro de Clientes</h1>
+    <form id="registro-cliente" action="/api/clientes" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required><br><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" id="apellido" required><br><br>
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" name="correo" id="correo" required><br><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" name="telefono" id="telefono" required><br><br>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" name="direccion" id="direccion" required><br><br>
+
+        <button type="submit">Registrar Cliente</button>
+    </form>
+</body>
+</html>
